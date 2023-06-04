@@ -12,6 +12,7 @@
 
   margin: auto;
   padding: 20px;
+  gap: 15px;
 }
 
 .display-screen {
@@ -51,4 +52,18 @@
   font-size: 1rem;
   color: #292524;
   background-color: #f56740;
+}
+.number-functions {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column: 1/5;
+  justify-self: center;
+  gap: 5px;
+}
+.number,
+.functions {
+  border-radius: 5px;
+  border: 1px solid #78716c;
+  width: 75px;
+  height: 80px;
 }
