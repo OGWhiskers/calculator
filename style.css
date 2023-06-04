@@ -1,3 +1,27 @@
+/* FONTS: */
+
+@font-face {
+  font-family: "infinity";
+  src: url("/fonts/madeinfinity_personaluse-thin-webfont.woff2") format("woff2"),
+    url("/fonts/madeinfinity_personaluse-thin-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: "roboto";
+  src: url("/fonts/roboto-condensed-webfont.woff2") format("woff2"),
+    url("/fonts/roboto-condensed-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: "dunkin";
+  src: url("/fonts/dunkin_bold-webfont.woff2") format("woff2"),
+    url("/fonts/dunkin_bold-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: "norse";
+  src: url("/fonts/norse-bold-webfont.woff2") format("woff2"),
+    url("/fonts/norse-bold-webfont.woff") format("woff");
+}
+/* ############################### */
+
 .calculator-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -47,7 +71,7 @@
   border: 2px solid #18181b;
   border-radius: 10px;
 
-  font-family: ;
+  font-family: "dunkin";
   font-weight: 400;
   font-size: 1rem;
   color: #292524;
@@ -92,6 +116,7 @@
 #addition,
 #point {
   align-self: center;
+  font-family: "roboto";
 }
 
 #seven-container {
@@ -160,4 +185,10 @@
 #addition-container {
   grid-column: 4;
   grid-row: 4;
+}
+
+.sign {
+  font-size: 1.2rem;
+  font-family: "infinity";
+  text-align: center;
 }
