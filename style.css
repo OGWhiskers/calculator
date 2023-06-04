@@ -84,7 +84,7 @@
 #seven,
 #eight,
 #nine,
-#ten,
+#zero,
 #division,
 #multiplications,
 #subtraction,
@@ -92,4 +92,72 @@
 #addition,
 #point {
   align-self: center;
+}
+
+#seven-container {
+  grid-column: 1;
+  grid-row: 1;
+}
+#eight-container {
+  grid-column: 2;
+  grid-row: 1;
+}
+#nine-container {
+  grid-column: 3;
+  grid-row: 1;
+}
+#division-container {
+  grid-column: 4;
+  grid-row: 1;
+}
+
+#four-container {
+  grid-column: 1;
+  grid-row: 2;
+}
+#five-container {
+  grid-column: 2;
+  grid-row: 2;
+}
+#six-container {
+  grid-column: 3;
+  grid-row: 2;
+}
+#multiplications-container {
+  grid-column: 4;
+  grid-row: 2;
+}
+
+#one-container {
+  grid-column: 1;
+  grid-row: 3;
+}
+#two-container {
+  grid-column: 2;
+  grid-row: 3;
+}
+#three-container {
+  grid-column: 3;
+  grid-row: 3;
+}
+#substraction-container {
+  grid-column: 4;
+  grid-row: 3;
+}
+
+#point-container {
+  grid-column: 1;
+  grid-row: 4;
+}
+#zero-container {
+  grid-column: 2;
+  grid-row: 4;
+}
+#equal-sign-container {
+  grid-column: 3;
+  grid-row: 4;
+}
+#addition-container {
+  grid-column: 4;
+  grid-row: 4;
 }
