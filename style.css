@@ -1,12 +1,17 @@
 .calculator-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 150px repeat(6, 100px);
+  grid-template-rows: 150px 70px repeat(5, 100px);
 
-  width: 600px;
+  width: 350px;
   height: 70%;
   border-radius: 20px;
-  border: 2px solid #facc15;
+  border: 2px solid#78716c;
+
+  background-color: #f1f5f9;
+
+  margin: auto;
+  padding: 20px;
 }
 
 .display-screen {
@@ -19,5 +24,31 @@
 
   align-self: center;
   justify-self: center;
-  background-color: #facc15;
+  background-color: #e7e5e4;
+}
+
+/* CLEAR DELETE BUTTON */
+
+.clear-delete {
+  display: flex;
+  grid-column: 1/5;
+
+  align-self: center;
+  justify-self: center;
+  gap: 25px;
+}
+
+.clear,
+.delete {
+  width: 150px;
+  height: 50px;
+
+  border: 2px solid #18181b;
+  border-radius: 10px;
+
+  font-family: ;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #292524;
+  background-color: #f56740;
 }
