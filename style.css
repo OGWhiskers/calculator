@@ -1,7 +1,7 @@
 .calculator-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 150px 70px repeat(5, 100px);
+  grid-template-rows: 150px 70px repeat(3, 100px) 20px;
 
   width: 350px;
   height: 70%;
@@ -63,7 +63,33 @@
 .number,
 .functions {
   border-radius: 5px;
-  border: 1px solid #78716c;
+  border: 2px solid #78716c;
   width: 75px;
   height: 80px;
+
+  font-size: 2.1rem;
+  font-weight: 900;
+  color: #78716c;
+
+  display: flex;
+  justify-content: center;
+}
+
+#one,
+#two,
+#three,
+#four,
+#five,
+#six,
+#seven,
+#eight,
+#nine,
+#ten,
+#division,
+#multiplications,
+#subtraction,
+#equal-sign,
+#addition,
+#point {
+  align-self: center;
 }
