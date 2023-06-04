@@ -1,0 +1,23 @@
+.calculator-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 150px repeat(6, 100px);
+
+  width: 600px;
+  height: 70%;
+  border-radius: 20px;
+  border: 2px solid #facc15;
+}
+
+.display-screen {
+  grid-column: 1/5;
+  width: 95%;
+  height: 90%;
+  resize: none;
+
+  border-radius: 20px;
+
+  align-self: center;
+  justify-self: center;
+  background-color: #facc15;
+}
