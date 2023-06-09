@@ -5,6 +5,12 @@ let substracted = 0;
 let multiplyed = 1;
 let divided = 0;
 
+// OPERATION:
+
+let firstNumber = 0;
+let operator = "";
+let secondNumber = 0;
+
 const add = (...a) => {
   sum = 0;
   for (let i = 0; i < a.length; i++) sum += a[i];
@@ -35,3 +41,12 @@ const divide = (...div) => {
 
   console.log(divided);
 };
+
+const operate = (firstNumber, operator, secondNumber) => {
+  if (operator == "+") add(firstNumber, secondNumber);
+  else if (operator == "-") substract(firstNumber, secondNumber);
+  else if (operator == "/") divide(firstNumber, secondNumber);
+  else if (operator == "*") multiply(firstNumber, secondNumber);
+};
+
+operate(20, "-", 23);
