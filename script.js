@@ -16,22 +16,11 @@ let secondNumber = 0;
 let displayValue = "";
 
 // FUNCTIONS :
-const add = (...a) => {
-  const sum = a.reduce((total, currentValue) => total + currentValue, 0);
+const add = (...a) =>
+  a.reduce((total, currentValue) => total + currentValue, 0);
 
-  console.log(sum);
-  return sum;
-};
-
-const multiply = (...mul) => {
-  const multiplyed = mul.reduce(
-    (total, currentValue) => total * currentValue,
-    1
-  );
-
-  console.log(multiplyed);
-  return multiplyed;
-};
+const multiply = (...mul) =>
+  mul.reduce((total, currentValue) => total * currentValue, 1);
 
 const substract = (...sub) => {
   substracted = 0;
