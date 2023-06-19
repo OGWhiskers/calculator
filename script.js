@@ -1,8 +1,11 @@
 "use strict";
 
-let sum = 0;
+// ELEMENTS:
+
+const displayScreen = document.querySelector(".display-child");
+const numbers = document.querySelectorAll(".number");
+
 let substracted = 0;
-let multiplyed = 1;
 let divided = 0;
 
 // OPERATION:
@@ -10,27 +13,32 @@ let divided = 0;
 let firstNumber = 0;
 let operator = "";
 let secondNumber = 0;
+let displayValue = "";
 
+// FUNCTIONS :
 const add = (...a) => {
-  sum = 0;
-  for (let i = 0; i < a.length; i++) sum += a[i];
+  const sum = a.reduce((total, currentValue) => total + currentValue, 0);
 
   console.log(sum);
+  return sum;
 };
 
 const multiply = (...mul) => {
-  multiplyed = 1;
-  for (let i = 0; i < mul.length; i++) multiplyed *= mul[i];
+  const multiplyed = mul.reduce(
+    (total, currentValue) => total * currentValue,
+    1
+  );
 
   console.log(multiplyed);
+  return multiplyed;
 };
 
 const substract = (...sub) => {
-  console.log(sub);
   substracted = 0;
   for (let i = 0; i < sub.length - 1; i++) substracted += sub[i] - sub[i + 1];
 
   console.log(substracted);
+  return substracted;
 };
 
 const divide = (...div) => {
@@ -49,4 +57,19 @@ const operate = (firstNumber, operator, secondNumber) => {
   else if (operator == "*") multiply(firstNumber, secondNumber);
 };
 
-operate(20, "-", 23);
+const displayOnScrean = (...numbers) => {
+  let newNumArray = [];
+  let displayNumbers = "";
+
+  let newNum = [];
+  for (newNum of numbers) newNumArray = [...newNum];
+
+  newNumArray.forEach((item) => {
+    item.addEventListener("click", () => {
+      displayNumbers += item.textContent;
+      displayValue += item.textContent;
+      displayScreen.textContent = displayNumbers;
+    });
+  });
+};
+displayOnScrean(numbers);
