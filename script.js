@@ -4,6 +4,9 @@
 
 const displayScreen = document.querySelector(".display-child");
 const numbers = document.querySelectorAll(".number");
+const functionOperater = document.querySelectorAll(".functions");
+const allBtn = document.querySelectorAll(".all-btn");
+const equalSign = document.getElementById("equal-sign-container");
 
 let substracted = 0;
 let divided = 0;
@@ -13,7 +16,10 @@ let divided = 0;
 let firstNumber = 0;
 let operator = "";
 let secondNumber = 0;
-let displayValue = "";
+
+let newNumArray = [];
+let newNum = [];
+let displayNumbers = "";
 
 // FUNCTIONS :
 const add = (...a) =>
@@ -42,23 +48,30 @@ const divide = (...div) => {
 const operate = (firstNumber, operator, secondNumber) => {
   if (operator == "+") add(firstNumber, secondNumber);
   else if (operator == "-") substract(firstNumber, secondNumber);
-  else if (operator == "/") divide(firstNumber, secondNumber);
-  else if (operator == "*") multiply(firstNumber, secondNumber);
+  else if (operator == "÷") divide(firstNumber, secondNumber);
+  else if (operator == "×") multiply(firstNumber, secondNumber);
 };
 
-const displayOnScrean = (...numbers) => {
-  let newNumArray = [];
-  let displayNumbers = "";
+let funcBtn = [];
+let newBtn = [];
 
-  let newNum = [];
-  for (newNum of numbers) newNumArray = [...newNum];
+// TRY SOMETHING:
+const operations = (node) => {
+  for (funcBtn of node) newBtn = [...node];
 
-  newNumArray.forEach((item) => {
-    item.addEventListener("click", () => {
-      displayNumbers += item.textContent;
-      displayValue += item.textContent;
-      displayScreen.textContent = displayNumbers;
-    });
+  newBtn.forEach((item) => {
+    if (item.classList.contains("number")) {
+      item.addEventListener("click", () => {
+        displayNumbers += item.textContent;
+        displayScreen.textContent = displayNumbers;
+      });
+    } else if (item == equalSign) {
+      equalSign.addEventListener("click", () => {
+        operate(firstNumber, item.textContent, secondNumber);
+      });
+    } else if (item.classList.contains("functions")) {
+      item.addEventListener("click", () => {});
+    }
   });
 };
-displayOnScrean(numbers);
+operations(allBtn);
